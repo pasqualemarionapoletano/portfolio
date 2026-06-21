@@ -1,0 +1,321 @@
+/* ===========================================================
+   PROJECT DETAIL PAGES — extends style.css
+   =========================================================== */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 32px;
+  transition: opacity 0.2s ease;
+}
+.back-link:hover { opacity: 0.7; }
+
+/* ===========================================================
+   PROJECT HERO
+   =========================================================== */
+.project-hero {
+  padding: 150px 28px 60px;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(255, 255, 255, 0.4), transparent 55%),
+    radial-gradient(circle at 0% 90%, rgba(11, 31, 77, 0.08), transparent 50%);
+}
+
+.project-hero-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.project-type {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  border: 1px solid var(--line);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.project-hero .project-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  background: var(--surface);
+  padding: 6px 14px;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(11, 31, 77, 0.08);
+}
+
+.project-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5.5vw, 56px);
+  line-height: 1.1;
+  color: var(--navy);
+  max-width: 880px;
+  margin: 0 0 24px;
+}
+
+.project-hero-sub {
+  font-size: 18px;
+  color: var(--text-dim);
+  max-width: 640px;
+}
+
+/* ===========================================================
+   KEY METRICS STRIP
+   =========================================================== */
+.project-metrics { padding: 0 0 90px; }
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.metric-card {
+  background: var(--surface);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+.metric-card:hover { background: var(--surface-2); }
+
+.metric-number {
+  font-family: var(--font-display);
+  font-size: 44px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+/* ===========================================================
+   GENERIC PROJECT SECTION
+   =========================================================== */
+.project-section { padding: 80px 0; }
+.project-section-alt { background: var(--surface-2); }
+
+.project-narrow { max-width: 760px; }
+
+.project-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3.6vw, 38px);
+  color: var(--navy);
+  line-height: 1.15;
+  margin: 0 0 24px;
+}
+
+.project-section p {
+  font-size: 16px;
+  color: var(--text-dim);
+  margin: 0 0 18px;
+}
+.project-section p strong { color: var(--navy); }
+
+.method-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* ===========================================================
+   FIVE FORCES LIST
+   =========================================================== */
+.force-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 12px;
+}
+
+.force-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+.force-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.force-number {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--surface);
+  border-radius: 6px;
+  padding: 4px 9px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(11, 31, 77, 0.08);
+}
+
+.force-item h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+
+.force-item p {
+  font-size: 15px;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+/* ===========================================================
+   SWOT GRID
+   =========================================================== */
+.swot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.swot-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 22px;
+  border: 1px solid var(--line);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+.swot-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 24px 48px rgba(11, 31, 77, 0.22);
+  border-color: var(--accent);
+  position: relative;
+  z-index: 2;
+}
+
+.swot-card p {
+  font-size: 14.5px;
+  margin: 0;
+}
+
+.swot-label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.swot-strength { background: #DDF3E8; color: #0E7A42; }
+.swot-weakness { background: #FBE5E5; color: #B4332E; }
+.swot-opportunity { background: #E1ECFB; color: var(--accent); }
+.swot-threat { background: #FDEBD6; color: #B5650A; }
+
+/* ===========================================================
+   STRATEGIC RECOMMENDATIONS — expandable cards
+   =========================================================== */
+.strategy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.strategy-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: left;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  /* no fixed height: grid-template-rows on the body handles the expand */
+}
+.strategy-card:hover,
+.strategy-card.is-open {
+  border-color: var(--accent);
+  box-shadow: 0 16px 32px rgba(11, 31, 77, 0.12);
+}
+
+.strategy-card-wide { grid-column: 1 / -1; }
+
+.strategy-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.strategy-icon {
+  width: 38px;
+  height: 38px;
+  background: var(--surface-2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: background 0.25s ease;
+}
+.strategy-card:hover .strategy-icon,
+.strategy-card.is-open .strategy-icon {
+  background: var(--accent);
+}
+
+.strategy-card-head h4 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--navy);
+  margin: 0;
+}
+
+/* Expand mechanism: animate max-height from 0 to a generous cap. Simpler
+   and more reliably supported than grid-template-rows tricks on a <p>. */
+.strategy-card-body {
+  max-height: 0;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-dim);
+  margin: 0;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin-top 0.4s ease;
+}
+
+.strategy-card:hover .strategy-card-body,
+.strategy-card.is-open .strategy-card-body {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 14px;
+}
+
+/* On touch devices :hover may stick or not apply at all, so the click-driven
+   .is-open class (toggled in JS) is the source of truth there. Desktop gets
+   both hover and click for convenience. */
+
+/* ===========================================================
+   RESPONSIVE
+   =========================================================== */
+@media (max-width: 900px) {
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+  .swot-grid { grid-template-columns: 1fr; }
+  .force-item { gap: 16px; }
+}
