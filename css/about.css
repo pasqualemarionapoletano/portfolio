@@ -1,0 +1,184 @@
+/* ===========================================================
+   ABOUT PAGE — extends style.css + project.css patterns
+   =========================================================== */
+
+.nav-active {
+  color: var(--accent) !important;
+  font-weight: 700;
+}
+
+/* ===========================================================
+   ABOUT HERO
+   =========================================================== */
+.about-hero {
+  padding: 150px 28px 80px;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(255, 255, 255, 0.4), transparent 55%),
+    radial-gradient(circle at 0% 90%, rgba(11, 31, 77, 0.08), transparent 50%);
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.about-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 52px);
+  color: var(--navy);
+  margin: 0 0 14px;
+  line-height: 1.1;
+}
+
+.about-hero-role {
+  font-size: 18px;
+  color: var(--text-dim);
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.about-hero-location {
+  font-size: 15px;
+  color: var(--text-dim);
+  margin: 0 0 28px;
+}
+
+.about-hero-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.about-hero-photo {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(11, 31, 77, 0.18);
+  aspect-ratio: 1 / 1;
+}
+
+.about-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+}
+
+/* ===========================================================
+   GENERIC ABOUT SECTION
+   =========================================================== */
+.about-section { padding: 80px 0; }
+.about-section-alt { background: var(--surface-2); }
+
+.about-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3.6vw, 38px);
+  color: var(--navy);
+  line-height: 1.15;
+  margin: 0 0 24px;
+}
+
+.about-section p {
+  font-size: 16px;
+  color: var(--text-dim);
+  margin: 0 0 18px;
+}
+
+/* ===========================================================
+   TIMELINE
+   =========================================================== */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 12px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.timeline-item:last-child { border-bottom: none; }
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.timeline-content h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--navy);
+  margin: 0 0 4px;
+}
+
+.timeline-org {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dim);
+  margin: 0 0 8px;
+}
+
+.timeline-detail {
+  font-size: 14.5px;
+  color: var(--text-dim);
+  margin: 0;
+}
+.timeline-detail strong { color: var(--navy); }
+
+/* ===========================================================
+   LANGUAGES
+   =========================================================== */
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.lang-item {
+  background: var(--surface);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lang-name {
+  font-family: var(--font-display);
+  font-size: 17px;
+  color: var(--navy);
+}
+
+.lang-level {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ===========================================================
+   RESPONSIVE
+   =========================================================== */
+@media (max-width: 900px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .about-hero-photo { max-width: 220px; margin: 0; order: -1; margin-bottom: 12px; }
+  .timeline-item { grid-template-columns: 1fr; gap: 6px; }
+  .lang-grid { grid-template-columns: repeat(2, 1fr); }
+}
