@@ -23,6 +23,35 @@
     radial-gradient(circle at 0% 90%, rgba(11, 31, 77, 0.08), transparent 50%);
 }
 
+.project-hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.project-hero-illu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+.project-hero-illu svg {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+}
+
+.illu-credit {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  margin: 12px 0 0;
+  text-align: center;
+}
+
 .project-hero-tags {
   display: flex;
   gap: 10px;
@@ -66,6 +95,18 @@
   font-size: 18px;
   color: var(--text-dim);
   max-width: 640px;
+}
+
+.spotify-embed {
+  max-width: 480px;
+  margin-top: 32px;
+}
+
+.spotify-caption {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-dim);
+  margin: 0 0 10px;
 }
 
 /* ===========================================================
@@ -312,7 +353,7 @@
    both hover and click for convenience. */
 
 /* ===========================================================
-   DNDE FRAMEWORK EXPLAINER (4 layers)
+   DNDE FRAMEWORK EXPLAINER (4 layers) — expandable, ghost letter style
    =========================================================== */
 .dnde-grid {
   display: flex;
@@ -322,44 +363,67 @@
 }
 
 .dnde-layer {
-  display: flex;
-  gap: 22px;
-  align-items: flex-start;
-  padding: 22px 0;
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
   border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+  text-align: left;
+  font-family: var(--font-body);
+  cursor: pointer;
 }
 .dnde-layer:last-child { border-bottom: none; }
 
-.dnde-letter {
-  font-family: var(--font-display);
-  font-size: 28px;
-  font-weight: 800;
-  color: white;
-  background: var(--accent);
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
+.dnde-layer-head {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  gap: 18px;
 }
 
-.dnde-layer h3 {
+.dnde-letter {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  width: 44px;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.dnde-layer:hover .dnde-letter,
+.dnde-layer.is-open .dnde-letter {
+  transform: scale(1.15);
+}
+
+.dnde-layer-head h3 {
   font-family: var(--font-display);
   font-size: 18px;
   color: var(--navy);
-  margin: 0 0 6px;
-}
-
-.dnde-layer p {
-  font-size: 14.5px;
-  color: var(--text-dim);
   margin: 0;
 }
 
+.dnde-layer-body {
+  max-height: 0;
+  overflow: hidden;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--text-dim);
+  margin: 0;
+  padding-left: 62px;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin-top 0.4s ease;
+}
+
+.dnde-layer:hover .dnde-layer-body,
+.dnde-layer.is-open .dnde-layer-body {
+  max-height: 160px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
 /* ===========================================================
-   NARRATIVE ROLE GRID (Propp roles)
+   NARRATIVE ROLE GRID (Propp roles) — expandable cards
    =========================================================== */
 .role-grid {
   display: grid;
@@ -373,14 +437,15 @@
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 18px 20px;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  text-align: left;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
-.role-card:hover {
-  transform: scale(1.04);
-  box-shadow: 0 16px 32px rgba(11, 31, 77, 0.14);
+.role-card:hover,
+.role-card.is-open {
   border-color: var(--accent);
-  position: relative;
-  z-index: 2;
+  box-shadow: 0 16px 32px rgba(11, 31, 77, 0.12);
 }
 
 .role-tag {
@@ -388,13 +453,25 @@
   font-family: var(--font-display);
   font-size: 15px;
   color: var(--navy);
-  margin-bottom: 6px;
 }
 
-.role-card p {
+.role-card-body {
+  max-height: 0;
+  overflow: hidden;
   font-size: 13.5px;
+  line-height: 1.5;
   color: var(--text-dim);
   margin: 0;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin-top 0.4s ease;
+}
+.role-card-body strong { color: var(--accent); }
+
+.role-card:hover .role-card-body,
+.role-card.is-open .role-card-body {
+  max-height: 100px;
+  opacity: 1;
+  margin-top: 8px;
 }
 
 /* ===========================================================
@@ -406,4 +483,7 @@
   .force-item { gap: 16px; }
   .role-grid { grid-template-columns: 1fr; }
   .dnde-layer { gap: 16px; }
+  .project-hero-grid { grid-template-columns: 1fr; }
+  .project-hero-illu { order: -1; margin-bottom: 12px; }
+  .project-hero-illu svg { max-width: 140px; }
 }

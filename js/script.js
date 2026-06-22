@@ -195,6 +195,32 @@ document.querySelectorAll('.strategy-card').forEach(card => {
 });
 
 // ============================================================
+// DNDE FRAMEWORK LAYERS — same click-to-expand pattern
+// ============================================================
+document.querySelectorAll('.dnde-layer').forEach(layer => {
+  layer.addEventListener('click', () => {
+    const wasOpen = layer.classList.contains('is-open');
+    document.querySelectorAll('.dnde-layer.is-open').forEach(open => {
+      if (open !== layer) open.classList.remove('is-open');
+    });
+    layer.classList.toggle('is-open', !wasOpen);
+  });
+});
+
+// ============================================================
+// NARRATIVE ROLE CARDS — same click-to-expand pattern
+// ============================================================
+document.querySelectorAll('.role-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const wasOpen = card.classList.contains('is-open');
+    document.querySelectorAll('.role-card.is-open').forEach(open => {
+      if (open !== card) open.classList.remove('is-open');
+    });
+    card.classList.toggle('is-open', !wasOpen);
+  });
+});
+
+// ============================================================
 // ANIMATED BACKGROUND GRADIENT ON SCROLL
 // ============================================================
 function updateBgPosition() {
