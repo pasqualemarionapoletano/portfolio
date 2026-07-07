@@ -593,6 +593,34 @@
 }
 
 /* ===========================================================
+   SLIDE SCREENSHOT — immagini delle presentazioni
+   =========================================================== */
+.slide-screenshot {
+  margin-top: 32px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(11, 31, 77, 0.14);
+  border: 1px solid var(--line);
+}
+
+.slide-screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slide-screenshot figcaption {
+  padding: 10px 16px;
+  background: var(--surface);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-top: 1px solid var(--line);
+}
+
+/* ===========================================================
    RESPONSIVE
    =========================================================== */
 @media (max-width: 900px) {
