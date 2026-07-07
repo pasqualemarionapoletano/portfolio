@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Analysis: BBS Canteen &mdash; Pasquale Mario Napoletano</title>
+<meta name="description" content="Survey e analisi quantitativa sulla soddisfazione per il servizio caffetteria della Bologna Business School: regressione lineare, Importance-Performance Analysis e implicazioni manageriali.">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html#top" class="nav-logo">P.N<span class="dot">.</span></a>
+    <nav class="nav-links">
+      <a href="../index.html#about">Profilo</a>
+      <a href="../index.html#approach">Metodo</a>
+      <a href="../index.html#stats">Numeri</a>
+      <a href="../index.html#projects">Progetti</a>
+      <a href="../index.html#skills">Competenze</a>
+      <a href="../index.html#sport">Sport</a>
+      <a href="../about.html">About</a>
+      <a href="../index.html#contact">Contatti</a>
+    </nav>
+    <a href="../index.html#contact" class="nav-cta">Contattami</a>
+    <button class="nav-burger" id="navBurger" aria-label="Apri menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#about">Profilo</a>
+  <a href="../index.html#approach">Metodo</a>
+  <a href="../index.html#stats">Numeri</a>
+  <a href="../index.html#projects">Progetti</a>
+  <a href="../index.html#skills">Competenze</a>
+  <a href="../index.html#sport">Sport</a>
+  <a href="../about.html">About</a>
+  <a href="../index.html#contact">Contatti</a>
+  <a href="../about.html" class="mobile-cta">About</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="project-hero">
+  <div class="section-inner project-hero-grid">
+    <div>
+      <a href="../index.html#projects" class="back-link reveal">&larr; Torna ai progetti</a>
+
+      <div class="project-hero-tags reveal">
+        <span class="project-tag">Data Analysis</span>
+        <span class="project-tag">Market Research</span>
+        <span class="project-type">Gruppo &middot; 6 persone</span>
+      </div>
+
+      <h1 class="project-hero-title reveal-title">
+        Il caff&egrave; alla BBS: dalla survey ai dati
+      </h1>
+
+      <p class="project-hero-sub reveal">
+        Analisi quantitativa sulla soddisfazione degli studenti per il servizio
+        caffetteria del nuovo campus della Bologna Business School &mdash; 111 rispondenti,
+        regressione lineare su Excel e Importance-Performance Analysis per tradurre
+        i dati in raccomandazioni concrete.
+      </p>
+    </div>
+
+    <div class="project-hero-illu reveal" aria-hidden="true">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="30" y="90" width="100" height="40" rx="4" stroke="var(--navy)" stroke-width="2"/>
+        <rect x="50" y="80" width="60" height="12" rx="3" stroke="var(--navy)" stroke-width="2"/>
+        <circle cx="80" cy="60" r="20" stroke="var(--accent)" stroke-width="2"/>
+        <path d="M68 60 Q80 45 92 60" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+        <line x1="45" y1="75" x2="115" y2="75" stroke="var(--line)" stroke-width="1.5"/>
+        <line x1="50" y1="110" x2="50" y2="100" stroke="var(--navy)" stroke-width="2"/>
+        <line x1="65" y1="110" x2="65" y2="96" stroke="var(--navy)" stroke-width="2"/>
+        <line x1="80" y1="110" x2="80" y2="102" stroke="var(--accent)" stroke-width="2.5"/>
+        <line x1="95" y1="110" x2="95" y2="98" stroke="var(--navy)" stroke-width="2"/>
+        <line x1="110" y1="110" x2="110" y2="93" stroke="var(--navy)" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM CREDIT ============ -->
+<section class="project-section">
+  <div class="section-inner project-narrow">
+    <div class="team-credit reveal">
+      <p class="team-credit-label">Lavoro di gruppo &mdash; Data Analysis for Market Research, BBS</p>
+      <p class="team-credit-text">
+        Il progetto &egrave; stato realizzato insieme ad Avventurato, Faggiotto, Gullett,
+        Puglioli e &Scedil;u&tcedil;u. Il gruppo ha condiviso la progettazione del questionario,
+        la raccolta di 111 risposte tramite Google Forms e la presentazione dei risultati.
+      </p>
+      <p class="team-credit-text">
+        Il mio contributo specifico ha riguardato l&rsquo;<strong>analisi quantitativa dei dati
+        in Excel</strong>: ho applicato le formule studiate durante il corso per eseguire la
+        regressione lineare multipla e costruire la matrice Importance-Performance, traducendo
+        poi i risultati in implicazioni manageriali per la caffetteria.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KEY METRICS ============ -->
+<section class="project-metrics">
+  <div class="section-inner">
+    <div class="metrics-grid">
+      <div class="metric-card reveal">
+        <span class="metric-number" data-count="111">0</span>
+        <span class="metric-label">Rispondenti al questionario</span>
+      </div>
+      <div class="metric-card reveal">
+        <span class="metric-number" data-count="6">0</span>
+        <span class="metric-label">Variabili analizzate nella regressione</span>
+      </div>
+      <div class="metric-card reveal">
+        <span class="metric-number" data-count="4">0</span>
+        <span class="metric-label">Settimane di raccolta dati</span>
+      </div>
+      <div class="metric-card reveal">
+        <span class="metric-number" data-count="5">0</span>
+        <span class="metric-label">Sezioni del questionario</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTEXT ============ -->
+<section class="project-section project-section-alt">
+  <div class="section-inner project-narrow">
+    <p class="section-eyebrow">Contesto</p>
+    <h2 class="project-section-title reveal-title">Il caff&egrave; come momento di vita sul campus</h2>
+    <p class="reveal">
+      Il caff&egrave; alla Bologna Business School non &egrave; solo una pausa energetica: &egrave; un
+      momento sociale che scandisce la giornata degli studenti. Con il trasferimento nel
+      nuovo campus, abbiamo deciso di misurare quanto il servizio della caffetteria
+      risponda alle aspettative, su quali dimensioni funziona e dove c&rsquo;&egrave; margine
+      di miglioramento.
+    </p>
+    <p class="reveal">
+      Il questionario &mdash; somministrato via Google Forms per quattro settimane &mdash; ha
+      coperto cinque aree: abitudini di consumo, qualit&agrave; percepita del caff&egrave;,
+      soddisfazione generale e word of mouth, diversit&agrave; dell&rsquo;offerta e profilo
+      demografico. Le scale di risposta erano a scelta multipla e a valutazione da 1 a 7.
+    </p>
+    <figure class="slide-screenshot reveal">
+      <img src="../assets/slides/da_survey.jpg" alt="Slide survey &mdash; 111 risposte, 4 settimane, 5 sezioni" loading="lazy">
+      <figcaption>Dalla presentazione &mdash; Il questionario: numeri chiave della raccolta dati</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ METHODOLOGY ============ -->
+<section class="project-section">
+  <div class="section-inner project-narrow">
+    <p class="section-eyebrow">Metodologia</p>
+    <h2 class="project-section-title reveal-title">Dal dato grezzo all&rsquo;analisi in Excel</h2>
+    <p class="reveal">
+      Il corso di Data Analysis for Market Research ci ha insegnato a ragionare sui dati
+      in modo strutturato: prima le statistiche descrittive (media, mediana, deviazione
+      standard, asimmetria) per capire la distribuzione di ogni variabile, poi l&rsquo;analisi
+      bivariata tramite correlazione, infine la regressione lineare multipla per isolare
+      il contributo di ciascuna dimensione alla soddisfazione complessiva.
+    </p>
+    <p class="reveal">
+      Il framework che ho applicato in prima persona &egrave; quello dell&rsquo;<strong>Importance-Performance
+      Analysis</strong>: i coefficienti della regressione misurano l&rsquo;<em>importanza</em> di ogni
+      variabile (quanto incide sulla soddisfazione), mentre le medie descrittive misurano
+      la <em>performance</em> attuale del servizio su quella stessa dimensione. Incrociare
+      i due assi produce una mappa a quattro quadranti che orienta le priorit&agrave; manageriali.
+    </p>
+    <div class="method-tags reveal">
+      <span class="tag">Survey design</span>
+      <span class="tag">Statistiche descrittive</span>
+      <span class="tag">Regressione lineare</span>
+      <span class="tag">Importance-Performance Analysis</span>
+      <span class="tag">Excel</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LINEAR REGRESSION ============ -->
+<section class="project-section project-section-alt">
+  <div class="section-inner project-narrow">
+    <p class="section-eyebrow">Il mio contributo &mdash; 01</p>
+    <h2 class="project-section-title reveal-title">La regressione lineare: cosa guida davvero la soddisfazione</h2>
+    <p class="reveal">
+      Ho costruito un modello di regressione lineare multipla con la soddisfazione
+      generale come variabile dipendente e sei dimensioni come predittori: qualit&agrave;,
+      gusto, servizio, aspetto/presentazione, diversit&agrave; dell&rsquo;offerta e prezzo.
+    </p>
+
+    <div class="force-list">
+      <div class="force-item reveal">
+        <span class="force-number" style="background:var(--surface-2);color:var(--accent);font-size:11px;min-width:48px;">R&sup2;</span>
+        <div>
+          <h3>Potere esplicativo del modello</h3>
+          <p>L&rsquo;R&sup2; del modello &egrave; 0,57 (aggiustato: 0,55): le sei variabili spiegano
+            il 57% della varianza nella soddisfazione complessiva &mdash; un risultato solido
+            per un survey di soddisfazione, e statisticamente significativo (F significativa a p = 0,00).</p>
+        </div>
+      </div>
+      <div class="force-item reveal">
+        <span class="force-number" style="background:var(--surface-2);color:var(--accent);font-size:11px;min-width:48px;">p&lt;.05</span>
+        <div>
+          <h3>Le variabili significative: gusto e qualit&agrave;</h3>
+          <p><strong>Gusto</strong> (coefficiente 0,51, p = 0,00) e <strong>qualit&agrave;</strong>
+            (coefficiente 0,33, p = 0,01) sono gli unici predittori statisticamente significativi.
+            Servizio, aspetto, diversit&agrave; e prezzo non raggiungono la soglia di significativit&agrave;,
+            suggerendo che la soddisfazione complessiva si decide soprattutto in tazza.</p>
+        </div>
+      </div>
+      <div class="force-item reveal">
+        <span class="force-number" style="background:var(--surface-2);color:var(--text-dim);font-size:11px;min-width:48px;">n.s.</span>
+        <div>
+          <h3>Le variabili non significative</h3>
+          <p>Prezzo (coeff. &minus;0,05, p = 0,43), aspetto (&minus;0,04, p = 0,70) e servizio
+            (0,12, p = 0,18) non hanno un effetto statisticamente rilevante sulla soddisfazione
+            generale &mdash; un risultato che orienta le priorit&agrave; di intervento.</p>
+        </div>
+      </div>
+    </div>
+
+    <figure class="slide-screenshot reveal">
+      <img src="../assets/slides/da_regression.jpg" alt="Slide &mdash; Linear Regression output" loading="lazy">
+      <figcaption>Dalla presentazione &mdash; Output della regressione lineare multipla (Excel)</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ IPA ============ -->
+<section class="project-section">
+  <div class="section-inner project-narrow">
+    <p class="section-eyebrow">Il mio contributo &mdash; 02</p>
+    <h2 class="project-section-title reveal-title">La matrice Importance &times; Performance</h2>
+    <p class="reveal">
+      L&rsquo;IPA mappa ogni variabile su due assi: sull&rsquo;asse orizzontale il coefficiente
+      di regressione (importanza per la soddisfazione), sull&rsquo;asse verticale la media
+      descrittiva (performance attuale percepita dagli studenti). La posizione di ogni punto
+      nella matrice suggerisce una diversa priorit&agrave; di intervento.
+    </p>
+
+    <div class="force-list">
+      <div class="force-item reveal">
+        <span class="force-number">Q1</span>
+        <div>
+          <h3>Concentrate here &mdash; alta importanza, bassa performance</h3>
+          <p><strong>Qualit&agrave;</strong> e <strong>diversit&agrave; dell&rsquo;offerta</strong> cadono
+            in questo quadrante: sono rilevanti per la soddisfazione ma la caffetteria non
+            performa ancora ai livelli attesi. Sono le priorit&agrave; di intervento pi&ugrave; urgenti.</p>
+        </div>
+      </div>
+      <div class="force-item reveal">
+        <span class="force-number">Q2</span>
+        <div>
+          <h3>Keep up the good work &mdash; alta importanza, alta performance</h3>
+          <p><strong>Gusto</strong> e <strong>servizio</strong> si trovano qui: funzionano bene
+            e pesano sulla soddisfazione. Vanno mantenuti ai livelli attuali senza distogliere
+            risorse verso aree meno critiche.</p>
+        </div>
+      </div>
+      <div class="force-item reveal">
+        <span class="force-number">Q3</span>
+        <div>
+          <h3>Possible overkill &mdash; bassa importanza, alta performance</h3>
+          <p><strong>Aspetto e presentazione</strong>: la caffetteria performa bene su questa
+            dimensione, ma essa non incide significativamente sulla soddisfazione complessiva.
+            Un segnale di risorse allocate in eccesso rispetto al ritorno atteso.</p>
+        </div>
+      </div>
+      <div class="force-item reveal">
+        <span class="force-number">Q4</span>
+        <div>
+          <h3>Low priority &mdash; bassa importanza, bassa performance</h3>
+          <p><strong>Prezzo</strong>: n&eacute; importante n&eacute; performante, ma soprattutto
+            non significativo nella regressione. Intervenire sul prezzo non produce effetti
+            rilevanti sulla soddisfazione generale degli studenti.</p>
+        </div>
+      </div>
+    </div>
+
+    <figure class="slide-screenshot reveal">
+      <img src="../assets/slides/da_ipa.jpg" alt="Slide &mdash; Importance x Performance matrix" loading="lazy">
+      <figcaption>Dalla presentazione &mdash; Matrice Importance &times; Performance</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ IMPLICATIONS ============ -->
+<section class="project-section project-section-alt">
+  <div class="section-inner project-narrow">
+    <p class="section-eyebrow">Il mio contributo &mdash; 03</p>
+    <h2 class="project-section-title reveal-title">Dalle implicazioni manageriali alle soluzioni</h2>
+    <p class="reveal">
+      La matrice IPA non &egrave; un fine ma un punto di partenza. Le priorit&agrave; emerse
+      &mdash; migliorare qualit&agrave; e diversit&agrave; dell&rsquo;offerta, mantenere gusto e servizio,
+      non sprecare risorse su prezzo e aspetto &mdash; hanno orientato le soluzioni proposte
+      al gruppo di gestione della caffetteria.
+    </p>
+    <p class="reveal">
+      Le raccomandazioni concrete includono: una <strong>partnership con Granarolo</strong>
+      per ampliare le opzioni di latte (soia, riso, avena), una <strong>coffee card fedelt&agrave;</strong>
+      in collaborazione con Granarolo stessa (ogni 10 caff&egrave; con latte, uno omaggio),
+      il <strong>redesign dei bicchieri da asporto</strong> con branding BBS per migliorare
+      l&rsquo;esperienza visiva, e l&rsquo;aggiunta di <strong>acqua frizzante e biscotto</strong>
+      a corredo del caff&egrave; per arricchire la presentazione senza stravolgere l&rsquo;offerta.
+    </p>
+    <figure class="slide-screenshot reveal">
+      <img src="../assets/slides/da_implications.jpg" alt="Slide &mdash; Managerial Implications" loading="lazy">
+      <figcaption>Dalla presentazione &mdash; Implicazioni manageriali dalla matrice IPA</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ REFLECTION ============ -->
+<section class="project-section">
+  <div class="section-inner project-narrow">
+    <p class="section-eyebrow">Cosa porto da questo progetto</p>
+    <h2 class="project-section-title reveal-title">I dati come argomento, non come decorazione</h2>
+    <p class="reveal">
+      Ci&ograve; che ho capito lavorando su questo progetto &egrave; la differenza tra avere dati
+      e saperli usare. La regressione ha confermato alcune intuizioni (il gusto conta pi&ugrave;
+      di tutto), ne ha smentite altre (il prezzo &egrave; meno rilevante di quanto si pensi)
+      e ha prodotto raccomandazioni difendibili perch&eacute; fondate su evidenza statistica,
+      non su opinioni. Il passaggio dalla regressione all&rsquo;IPA all&rsquo;implicazione manageriale
+      &egrave; esattamente il percorso che voglio saper fare in qualsiasi contesto professionale.
+    </p>
+  </div>
+</section>
+
+<!-- ============ NEXT PROJECT / BACK ============ -->
+<section class="contact project-contact">
+  <div class="section-inner contact-inner">
+    <p class="section-eyebrow">Prossimi passi</p>
+    <h2 class="contact-title reveal-title">Guarda gli altri progetti.</h2>
+    <p class="contact-sub reveal">
+      Altre analisi tra ricerca di mercato, competitive analysis e marketing strategy.
+    </p>
+    <div class="contact-links reveal">
+      <a href="../index.html#projects" class="contact-link">&larr; Tutti i progetti</a>
+      <a href="../index.html#contact" class="contact-link">Contattami &nearr;</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="section-inner footer-inner">
+    <span>&copy; 2026 Pasquale Mario Napoletano</span>
+    <span>Costruito con cura, zero framework.</span>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
