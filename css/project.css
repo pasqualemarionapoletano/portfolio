@@ -475,6 +475,124 @@
 }
 
 /* ===========================================================
+   TEAM CREDIT BOX
+   =========================================================== */
+.team-credit {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+}
+.team-credit-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin: 0 0 14px;
+}
+.team-credit-text {
+  font-size: 15px;
+  color: var(--text-dim);
+  margin: 0 0 12px;
+}
+.team-credit-text:last-child { margin-bottom: 0; }
+.team-credit-text strong { color: var(--navy); }
+
+/* ===========================================================
+   RATIO / TREND TABLES
+   =========================================================== */
+.ratio-block { margin-top: 36px; }
+.ratio-block:first-of-type { margin-top: 28px; }
+
+.ratio-block-title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  color: var(--navy);
+  margin: 0 0 14px;
+}
+
+.ratio-table-wrap {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(11, 31, 77, 0.10);
+}
+
+.ratio-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 480px;
+  background: var(--surface);
+}
+
+/* Header scuro */
+.ratio-table thead tr {
+  background: var(--navy);
+}
+.ratio-table thead th {
+  padding: 13px 16px;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.85);
+  white-space: nowrap;
+}
+.ratio-table thead th:first-child { text-align: left; }
+
+/* Righe zebrate */
+.ratio-table tbody tr:nth-child(odd)  { background: var(--surface); }
+.ratio-table tbody tr:nth-child(even) { background: var(--surface-2); }
+.ratio-table tbody tr {
+  border-bottom: 1px solid var(--line);
+  transition: background 0.15s ease;
+}
+.ratio-table tbody tr:last-child { border-bottom: none; }
+.ratio-table tbody tr:hover { background: #d5e8fb; }
+
+.ratio-table td {
+  padding: 12px 16px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--text-dim);
+}
+.ratio-table td:first-child {
+  text-align: left;
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--navy);
+  white-space: normal;
+}
+
+/* Badge trend */
+.ratio-trend {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+}
+.trend-up    { background: #FEF3E2; color: #C47A0A; }
+.trend-down  { background: #FDEEED; color: #C0392B; }
+.trend-mixed { background: #E1ECFB; color: var(--accent); }
+.trend-flat  { background: var(--surface-2); color: var(--text-dim); }
+
+.ratio-comment {
+  font-size: 14.5px;
+  color: var(--text-dim);
+  margin: 16px 0 0;
+  line-height: 1.65;
+}
+
+/* ===========================================================
    RESPONSIVE
    =========================================================== */
 @media (max-width: 900px) {
@@ -486,4 +604,7 @@
   .project-hero-grid { grid-template-columns: 1fr; }
   .project-hero-illu { order: -1; margin-bottom: 12px; }
   .project-hero-illu svg { max-width: 140px; }
+  .team-credit { padding: 20px; }
+  .ratio-table { font-size: 13px; }
+  .ratio-table th, .ratio-table td { padding: 10px 12px; }
 }
