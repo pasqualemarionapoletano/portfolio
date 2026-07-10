@@ -767,3 +767,54 @@ img { max-width: 100%; display: block; }
   .stats-grid { grid-template-columns: 1fr; }
   .hero-title { font-size: clamp(32px, 9vw, 44px); }
 }
+
+/* ===========================================================
+   WIP BANNER
+   =========================================================== */
+.wip-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: var(--navy);
+  color: rgba(255,255,255,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 48px 10px 20px;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(11,31,77,0.18);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.wip-banner.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+.wip-icon { font-size: 15px; flex-shrink: 0; }
+.wip-close {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 6px;
+  transition: color 0.15s;
+}
+.wip-close:hover { color: #fff; }
+body.wip-visible .nav { top: 40px; }
+body.wip-visible { padding-top: 40px; }
+@media (max-width: 600px) {
+  .wip-banner { font-size: 12px; padding: 9px 40px 9px 16px; }
+  body.wip-visible { padding-top: 48px; }
+  body.wip-visible .nav { top: 48px; }
+}
