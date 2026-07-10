@@ -15,6 +15,13 @@
 </head>
 <body>
 
+<!-- ============ WIP BANNER ============ -->
+<div class="wip-banner" id="wipBanner">
+  <span class="wip-icon">🚧</span>
+  <span class="wip-text">Sito in aggiornamento &mdash; nuovi progetti in arrivo nelle prossime settimane.</span>
+  <button class="wip-close" id="wipClose" aria-label="Chiudi">&times;</button>
+</div>
+
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="nav-inner">
@@ -437,5 +444,18 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script>
+  (function() {
+    var banner = document.getElementById('wipBanner');
+    var closeBtn = document.getElementById('wipClose');
+    if (banner) {
+      document.body.classList.add('wip-visible');
+      closeBtn.addEventListener('click', function() {
+        banner.classList.add('hidden');
+        document.body.classList.remove('wip-visible');
+      });
+    }
+  })();
+</script>
 </body>
 </html>
